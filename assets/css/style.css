@@ -10,6 +10,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --color-text-primary: #ab29ca; 
+    --color-text-secundary: #101E2C;
+    --color-text-terctiary: #485663;
+    --color-primary: #9a00bf;
+    --color-secundary: #F4D4FB;
+    --background-color: #FAFBFE;
+    --lowText-font-size: 16px;
+    --text-size-title: 40px;
+    --text-title-card: 24px;
+    --text-title-cardv2: 20px;
+    --text-paragraph: 16px;
+    --box-shadow-primary: 0px 6px 50px -20px rgba(0, 0, 0, 0.2);
+}
+
+/* BEGIN ESTILOS PARA EL MENU */
 header {
     width: 100%;
     height: 100px;
@@ -58,19 +74,19 @@ header {
 
 
 .main nav ul li a {
-    color: black;   /* Variable*/
-    font-size: 16px;  /* Variable*/
+    color: var(--color-text-secundary);   /* Variable*/
+    font-size: var(--lowText-font-size);  /* Variable*/
     position: relative;
 }
 
 .main nav ul li a:hover {
-    color: brown;
+    color: var(--color-text-primary);
 }
 
 .btn-quote {
     display: block;
     padding: 8px 40px;
-    border: 2px solid #9A00BF; 
+    border: 2px solid var(--color-primary);
     border-radius: 8px;
     font-weight: 500;
     margin: 0px 20px;
@@ -78,7 +94,7 @@ header {
 }
 
 .btn-quote:hover {
-    background-color: #9A00BF;
+    background-color: var(--color-primary);
     color: white;
 }
 
@@ -92,4 +108,69 @@ header {
 
 .main .redes-sociales img {
     width: 20px;
+}
+
+/* END ESTILOS PARA EL MENU */
+
+/* BEGIN ESTILOS PARA EL PORTADA */
+/* END ESTILOS PARA LA PORTADA*/
+.container-cover {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--color-secundary);
+}
+
+.cover {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.text-cover {
+    width: 100%;
+    padding-right: 150px;
+}
+
+.text-cover h1 {
+    font-size: 50px;
+    color: var(--color-text-secundary);
+}
+
+.text-cover p {
+    font-size: var(--text-paragraph);
+    margin-top: 40px;
+}
+
+.btn-text {
+    display: block;
+    width: 150px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+    border : 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.btn-text:hover{
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.img-cover {
+    width: 100%;
+}
+
+.img-cover img {
+    width: 550px;
+}
+body {
+  overflow-x: hidden;
 }
