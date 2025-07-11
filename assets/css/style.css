@@ -276,3 +276,15 @@ body {
 .image-about img {
        width: 300px;
 }
+
+/* Services */
+.card-service img{
+    width: 50px;
+}
+
+.card-service i {
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
