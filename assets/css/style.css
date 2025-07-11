@@ -235,3 +235,44 @@ body {
 .box-card-primary p {
     margin-top: 20px;
 }
+
+/* Estilos sobre nosotros */
+.container-about {
+    padding: 100px 0px;
+    background : var(--background-color);
+    margin-top: 100px;
+}
+
+.about {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.text-about {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.text-about h1 {
+    color: var(--color-text-secundary);
+    font-weight: 600;
+}
+
+.text-about p {
+    font-size: var(--text-paragraph);
+    margin-top: 40px;
+    color: var(--color-text-terctiary);
+}
+
+.image-about {
+    width: 100%;
+    display: flex;
+}
+
+.image-about img {
+       width: 300px;
+}
