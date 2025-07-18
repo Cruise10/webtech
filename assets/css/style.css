@@ -278,6 +278,18 @@ body {
        width: 300px;
 }
 
+/*ESTILOS PARA SERVICIOS */
+
+.card-service img{
+    width: 50px;}
+
+.card-service i {
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+
 /* ESTILOS PARA PROYECTOS */
 .flip-card {    
   width: 320px;
