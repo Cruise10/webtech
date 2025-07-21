@@ -399,19 +399,22 @@ body {
 
 /***************** CONTACTO ******************/
 
+.container-all {
+    background: var(--background-color);
+}
+
 .container-contact {
     max-width: 1200px;
      margin: auto;
     padding: 100px 0px;
-    /*background: var(--background-color);*/
- 
 }
+
 
 .container-form {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 4.5rem;
 }
 
 .map-container iframe {
@@ -419,6 +422,7 @@ body {
     height: 100%;
     border: none;
     border-radius: 0.4rem;
+    margin: 0px 20px;
 }
 
 .form-contact {
@@ -438,6 +442,13 @@ body {
     border-bottom: 3px solid var(--color-text-primary);
     background: transparent;
     color: var(--color-text-secundary);
+}
+
+.form-input h2 {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    font-weight: 500;
 }
 
 .form-contact textarea {
