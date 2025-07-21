@@ -396,3 +396,74 @@ body {
 .social-icons a{
     margin: 0px 4px;
 }
+
+/***************** CONTACTO ******************/
+
+.container-contact {
+    max-width: 1200px;
+     margin: auto;
+    padding: 100px 0px;
+    /*background: var(--background-color);*/
+ 
+}
+
+.container-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.form-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0px 20px;
+}
+
+.form-contact input,
+.form-contact textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-bottom: 3px solid var(--color-text-primary);
+    background: transparent;
+    color: var(--color-text-secundary);
+}
+
+.form-contact textarea {
+    grid-column: 1 / 3; /* Ocupa dos columnas */;
+    resize: none;
+    height: 180px;
+}
+
+.form-contact button {
+    padding: 10px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;    
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+@media (max-width: 768px) {
+    .form-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .form-contact textarea,
+    .form-contact button {
+        grid-column: auto; /* Vuelve a ocupar solo 1 columna */
+    }
+}
