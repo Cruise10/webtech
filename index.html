@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soluciones digitales inteligentes para empresas modernas - WebTech">
+    <meta name="keywords" content="Desarrollo web, diseño UX/UI, software empresarial, inteligencia artificial, soporte 24/7">
     <title>Landing Page Modern - WebTech</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
 </head>
+
 <body>
     <!-- Header - Menu -->
     <header>
@@ -17,22 +21,25 @@
                 </a>
             </div>
             <div class="main">
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
                 <nav>
                     <ul>
                         <li>
                             <a href="#">Inicio</a>
                         </li>
                         <li>
-                            <a href="#">Sobre</a>
+                            <a href="#about">Sobre</a>
                         </li>
                         <li>
-                            <a href="#">Servicios</a>
+                            <a href="#Services">Servicios</a>
                         </li>
                         <li>
-                            <a href="#">Obra</a>
+                            <a href="#Projects">Obra</a>
                         </li>
                         <li>
-                            <a href="#">Contacto</a>
+                            <a href="#Contact">Contacto</a>
                         </li>
                     </ul>
                 </nav>
@@ -65,7 +72,7 @@
                 <section class="text-cover">
                     <h1>Trabaje inteligentemente con infinitas posibilidades</h1>
                     <p>Optimiza tus procesos con soluciones digitales modernas que se adaptan a las necesidades reales de tu negocio.</p>
-                       <a href="#" class="btn-text-cover btn-text">Empezar</a>
+                       <a href="#" class="btn-text">Empezar</a>
                 </section>
                 <section class="img-cover">
                     <img src="images/Cover/hero-img.png" alt="">
@@ -86,8 +93,8 @@
                 <!-- Card 1 -->
                 <div class="box-card-primary">
                     <img src="images/Trust area/anchor.png" alt="">
-                    <h2>Control empresarial comleto</h2>
-                    <p>Gestiona todas lasa áreas de tu empresa desde un solo panel.</p>
+                    <h2>Control empresarial completo</h2>
+                    <p>Gestiona todas las áreas de tu empresa desde un solo panel.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="box-card-primary">
@@ -106,7 +113,7 @@
     </div>
     
     <!-- Sobre nosotros - Nuestro equipo -->
-    <div class="container-about div-offset">
+    <div class="container-about div-offset" id="about">
         <div class="about">
             <div class="text-about">
                 <h1>El equipo creativo más innovador</h1>
@@ -122,7 +129,7 @@
     </div>
 
     <!-- SERVICIOS  -->
-     <div class="container-services container-card-primary div-offset">
+     <div class="container-services container-card-primary div-offset" id="Services">
         <div class="service card-primary">
             <div class="text-service text-card-primary">
                 <p>QUE HACEMOS</p>
@@ -178,7 +185,7 @@
      </div>
      
      <!-- NUESTRAS OBRAS O PROYECTOS -->
-      <div class="container-projects container-card-primary div-offset">
+      <div class="container-projects container-card-primary div-offset" id="Projects">
         <div class="card-primary">
             
             <!-- TITULO DE SECCIÓN -->
@@ -363,30 +370,39 @@
      </div>
 
     <!-- FORMULARIO CONTACTO -->
-     <div class="container-all">
+     <div class="container-all" id="Contact">
+         <div class="container-contact">
         <div class="container-contact">
-        <div class="container-form">
-            <div class="map-container">
-                <!-- MAP -->
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d2258.8031403690993!2d-63.200845378599446!3d-17.799265625027907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-17.7989407!2d-63.2014706!4m3!3m2!1d-17.7989392!2d-63.201461099999996!5e0!3m2!1ses!2sbo!4v1752879656902!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="container-form">
+                    <div class="map-container">
+                        <!-- MAP -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d2258.8031403690993!2d-63.200845378599446!3d-17.799265625027907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-17.7989407!2d-63.2014706!4m3!3m2!1d-17.7989392!2d-63.201461099999996!5e0!3m2!1ses!2sbo!4v1752879656902!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="form-input">
+                        <h2>Hablemos de tu idea</h2>
+                        <form action="https://formsubmit.co/your@email.com" method="POST" class="form-contact">
+                            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="Nuevo mensaje de contacto">
+                            <input type="hidden" name="_autoresponse" value="Gracias por contactarnos, nos pondremos en contacto contigo pronto.">
+                    
+                            
+                            <!-- <form action="#" method="post" class="form-contact"> -->
+                            <input type="text" name="nombre" id="Nombre" placeholder="Nombre" required>
+                            <input type="email" name="email" placeholder="Correo electrónico" required>
+                            <input type="text" name="tema" placeholder="Tema" required>
+                            <input type="tel" name="telefono" placeholder="Teléfono" required>
+                            <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                            <button type="submit" value="send" class="btnSend">Saber más</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="form-input">
-                <h2>Hablemos de tu idea</h2>
-                <form action="#" method="post" class="form-contact">
-                    <input type="text" name="nombre" id="Nombre" placeholder="Nombre" required>
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="text" name="tema" placeholder="Tema" required>
-                    <input type="tel" name="telefono" placeholder="Teléfono" required>
-                    <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
-                    <button type="submit" value="send" class="btnSend">Saber más</button>
-                </form>
-            </div>
+     </div>
         </div>
-     </div>
-     </div>
 
      <!-- FOOTER -->
-      <footer>
+      <footer id="footer">
         <div class="container-footer">
             <div class="box-footer">
                 <div class="logo">
@@ -404,11 +420,11 @@
 
             <div class="box-footer">
                 <h2>Enlaces rápidos</h2>
-                <a href="#">Quienes Somos</a>
-                <a href="#">Nuestro Equipo</a>
-                <a href="#">Experiencia propósito</a>
-                <a href="#">Historia Exitosa</a>
-                <a href="#">Soporte especializado</a>
+                <a href="#">Inicio</a>
+                <a href="#about">Sobre Nosotros</a>
+                <a href="#Services">Servicios</a>
+                <a href="#Projects">Obras o Proyectos</a>
+                <a href="#Contact">Contacto</a>
             </div>
 
             <div class="box-footer">
@@ -433,5 +449,6 @@
             <p>Coyright  2025 - Todos los derechos reservados <b>CruiseDev</b></p>
         </div>
       </footer>
+      <script src="assets/js/consultas.js"></script>
 </body>
 </html>

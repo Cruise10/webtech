@@ -1,3 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    /* FUENTE DE LA PAGINA*/
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-text-primary: #ab29ca; 
+    --color-text-secundary: #101E2C;
+    --color-text-terctiary: #485663;
+    --color-primary: #9a00bf;
+    --color-secundary: #F4D4FB;
+    --background-color: #FAFBFE;
+    --lowText-font-size: 16px;
+    --text-size-title: 40px;
+    --text-title-card: 24px;
+    --text-title-cardv2: 20px;
+    --text-paragraph: 16px;
+    --box-shadow-primary: 0px 6px 50px -20px rgba(0, 0, 0, 0.2);
+}
+
+/* BEGIN ESTILOS PARA EL MENU */
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+}
+
+.container-header {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(154, 0, 191, 0.5);
+  border-radius: 4px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main nav {
+    margin : 0px 20px;
+}
+
+.main nav ul {
+    display: flex;
+}
+
+.main nav ul li {
+    list-style: none;
+    margin: 20px 16px;
+}
+
+
+.main nav ul li a {
+    color: var(--color-text-secundary);   /* Variable*/
+    font-size: var(--lowText-font-size);  /* Variable*/
+    position: relative;
+}
+
+.main nav ul li a:hover {
+    color: var(--color-text-primary);
+}
+
+.btn-quote {
+    display: block;
+    padding: 8px 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 0px 20px;
+    transition: all 300ms;
+}
+
+.btn-quote:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.main .redes-sociales {
+    margin: 0px 10px;
+}
+
+.main .redes-sociales a{
+    margin: 0px 4px;
+}
+
+.main .redes-sociales img {
+    width: 20px;
+}
+
+/* END ESTILOS PARA EL MENU */
+
+/* BEGIN ESTILOS PARA EL PORTADA */
+/* END ESTILOS PARA LA PORTADA*/
 .container-cover {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -28,6 +150,26 @@
     margin-top: 40px;
 }
 
+.btn-text {
+    display: block;
+    width: 150px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+    border : 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.btn-text:hover{
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
 .img-cover {
     width: 100%;
 }
@@ -35,11 +177,11 @@
 .img-cover img {
     width: 550px;
 }
+body {
+  overflow-x: hidden;
+}
 
-
-
-/****************************/
-/*genera confanza*/
+/* Estilos generales CARDS */
 .container-card-primary {
     padding-top: 100px;
 }
@@ -69,14 +211,12 @@
     color: var(--color-text-secundary);
 }
 
-
 .container-box-cardPrimary {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
 }
-
 
 .box-card-primary {
     max-width: 350px;
@@ -100,4 +240,343 @@
 
 .box-card-primary p {
     margin-top: 20px;
+}
+
+/* Estilos sobre nosotros */
+
+.container-about {
+    padding: 100px 0px;
+    background : var(--background-color);
+    margin-top: 100px;
+}
+
+.about {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.text-about {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.text-about h1 {
+    color: var(--color-text-secundary);
+    font-weight: 600;
+}
+
+.text-about p {
+    font-size: var(--text-paragraph);
+    margin-top: 40px;
+    color: var(--color-text-terctiary);
+}
+
+.image-about {
+    width: 100%;
+    display: flex;
+}
+
+.image-about img {
+       width: 300px;
+}
+
+/*ESTILOS PARA SERVICIOS */
+
+.card-service img{
+    width: 50px;}
+
+.card-service i {
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+
+/* ESTILOS PARA PROYECTOS */
+.flip-card {    
+  width: 320px;
+  height: 350px;
+  perspective: 1000px;
+  margin: 14px;
+}
+
+.flip-card-inner {
+  position: relative;  
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Cara frontal con imagen y texto */
+.flip-card-front {
+  background-color: #fff;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  /*background: rgba(0,0,0,0.6);*/
+  background: var(--color-text-secundary);
+  /*background: var(--color-text-primary);*/
+  width: 100%;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Cara trasera */
+.flip-card-back {
+  background-color: var(--color-primary);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.cards-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* ESTILOS PARA TEAMS */
+
+.container-team {
+    padding-bottom: 100px;
+}
+
+.card-team-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards bajen en lugar de desbordarse */
+    gap: 30px; /* Espacio entre las cards */
+    justify-content: center; /* Centra las cards */
+    margin-top: 50px;
+}
+
+.card-team {
+    flex: 1 1 250px; /* Se adapta, pero mínimo 250px */
+    max-width: 300px;
+    height: auto;
+}
+
+.card-team img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.social-icons a{
+    margin: 0px 4px;
+}
+
+/***************** CONTACTO ******************/
+
+.container-all {
+    background: var(--background-color);
+}
+
+.container-contact {
+    max-width: 1200px;
+     margin: auto;
+    padding: 100px 0px;
+}
+
+
+.container-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.5rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.4rem;
+    margin: 0px 20px;
+}
+
+.form-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0px 20px;
+}
+
+.form-contact input,
+.form-contact textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-bottom: 3px solid var(--color-text-primary);
+    background: transparent;
+    color: var(--color-text-secundary);
+}
+
+.form-input h2 {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    font-weight: 500;
+}
+
+.form-contact textarea {
+    grid-column: 1 / 3; /* Ocupa dos columnas */;
+    resize: none;
+    height: 180px;
+}
+
+.form-contact button {
+    padding: 10px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;    
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+/***************** FOOTER ******************/
+footer {
+    width: 100%;
+}
+
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box-footer h2 {
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.box-footer a {
+    margin-top: 10px;
+    color: var(--color-text-terctiary);
+    font-weight: 600;
+}
+
+.box-footer .logo img {
+    width: 180px;
+}
+
+.box-footer a:hover {
+    color: var(--color-text-primary);    
+}
+
+.box-footer .terms {
+    max-width: 350px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.box-footer i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--color-text-primary);
+
+}
+
+.input-icon {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.input-icon input {
+    width: 100%;
+    padding-right: 35px; /* espacio para el icono */
+    padding-left: 15px; /* espacio para el texto */
+    height: 40px;
+    background: #F2F9FB;
+    border: none;
+    border-radius: 10px ;
+}
+
+.input-icon i {
+    position: absolute;
+    top: 50%; /* centrado vertical */
+    right: 10px; /* ícono a la derecha */
+    transform: translateY(-50%); /* centrado vertical */
+    color: var(--color-text-primary);
+    font-size: 28px;
+    pointer-events: none; /* para que no interfiera al hacer clic */
+}
+
+.box-copyright p{
+    width: 70%;
+    margin: 10px auto;
+    letter-spacing: 2px
+}
+
+.box-copyright hr {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+/***************** REPONSIVE ******************/
+
+@media (max-width: 768px) {
+    .form-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .form-contact textarea,
+    .form-contact button {
+        grid-column: auto; /* Vuelve a ocupar solo 1 columna */
+    }
 }
